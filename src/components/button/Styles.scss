@@ -1,0 +1,49 @@
+@import "../../styles/utils/colors";
+@import "../../styles/utils/breakpoints";
+@import "../../styles/utils/mixins";
+
+$size: 50px;
+
+.submitButton {
+  background-color: $grass-blade;
+  text-align: center;
+  padding: 0 2em;
+  border-radius: $size / 2;
+  color: white;
+  font-size: $size * 0.4;
+  font-weight: 600;
+  height: $size;
+  line-height: $size;
+  display: block;
+  cursor: pointer;
+  @media only screen and(max-width:$mobile) {
+    width: 100%;
+    padding: 0;
+  }
+
+  &--label {
+    padding: 0 20px;
+  }
+
+  &.hasIcons {
+    .icon,
+    .placeholder {
+      width: 44px;
+      display: inline-block;
+    }
+  }
+
+  //animation for loader
+  .spinningLoader {
+    animation: rotate-s-loader 1.6s linear infinite;
+  }
+
+  @keyframes rotate-s-loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

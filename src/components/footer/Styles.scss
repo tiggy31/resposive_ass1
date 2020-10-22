@@ -1,0 +1,25 @@
+#footerContainer {
+    bottom: 0px;
+    color: white;
+    height: 40px;
+    width: 100%;
+    background-color:#2b2c2c;
+    position: fixed;
+    bottom:0;
+}
+#footerContent{
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 40px;
+  padding: 0 15px;
+}
+
+#reserved{
+  margin-left: 20px;
+  color:lightgrey;
+}
+
+#footerSlogan {
+    float: right;
+    color:lightgrey;
+}

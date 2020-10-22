@@ -1,0 +1,107 @@
+@import "../../styles/utils/colors";
+@import "../../styles/utils/mixins";
+@import "../../styles/utils/breakpoints";
+
+.learningModule {
+  &--header {
+    text-align: center;
+    // @media only screen and (max-width: $mobile) {
+    //   display: flex;
+    //   justify-content: space-between;
+    //   padding: 15px 20px;
+    //   align-items: center;
+    // }
+  }
+
+  &--title {
+    margin: 25px 10px;
+    color: $morning-sky;
+    font-weight: 600;
+    font-size: 1.5em;
+
+    @media only screen and (max-width: $mobile) {
+      margin: 0;
+      text-align: left;
+      font-size: 1.3em;
+    }
+  }
+
+  &--additionalInfoIcon {
+    color: $morning-sky;
+    @media only screen and (min-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &--subHeader {
+    @include subheader;
+    min-height: 42px;
+    @media only screen and (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &--answerArea {
+    background-color: white;
+    box-shadow: 0px 0px 20px -15px;
+    padding: 0px 0px 20px 0;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    @media only screen and (max-width: $mobile) {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      background-color: unset;
+      box-shadow: none;
+      background-color: transparent;
+    }
+  }
+
+  &--selections {
+    padding: 30px 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+    @media only screen and (max-width: $tablet) {
+      grid-auto-flow: row;
+      width: 375px;
+      grid-template-columns: 50% 50%;
+      justify-items: center;
+      grid-gap: 17px 6px;
+    }
+    @media only screen and (max-width: $mobile) {
+      grid-gap: 10px 0px;
+      padding: 0 0 40px;
+    }
+  }
+
+  &--submitButtonContainer {
+    height: 50px;
+    position: relative;
+    .submitButton {
+      float: right;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      padding: 0 10px;
+
+      .submitButton {
+        float: unset;
+      }
+    }
+  }
+
+  &--overlay {
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+}

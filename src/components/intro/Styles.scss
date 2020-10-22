@@ -1,0 +1,29 @@
+@import '../../styles/utils/colors';
+@import '../../styles/utils/mixins';
+
+
+.introContainer { 
+    text-align: center;
+    background-color: white;
+    padding: 40px 0;
+    max-width: 80%;
+    border-radius: 40px;
+    margin: 0 auto;
+    &--logo {
+        background-color: $barney;
+        padding: 15px;
+        border-radius: 25px;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    &--message {
+        @include subheader;
+    }
+
+    .submitButton { 
+        background-color: $barney;
+        margin-top: 40px;
+        display: inline-block;
+    }
+   
+}
